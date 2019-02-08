@@ -1,0 +1,25 @@
+<ngx-spinner></ngx-spinner>
+<app-header></app-header>
+<span><marquee><b>{{Servermsg}}</b></marquee></span>
+<form class="example" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search By Name" name="search2" [(ngModel)]="searchByName">
+  <button type="submit" (click)="searchStudentByName()"><i class="fa fa-search"></i></button>
+</form>
+<br>
+<form class="example" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search By USN" name="search2" [(ngModel)]="searchByUsn">
+  <button type="submit" (click)="searchStudentByUSN()"><i class="fa fa-search"></i></button>
+</form>
+
+<table>
+  <tr>
+    <th>Student Name</th>
+    <th>USN</th>
+    <th>Email</th>
+  </tr>
+  <tr *ngFor='let item of responseSTudentData'>
+    <td>{{item.studentName}}</td>
+    <td>{{item.studentUsn}}</td>
+    <td>{{item.emailId}}</td>
+  </tr>
+</table>

@@ -1,0 +1,28 @@
+<header class="header-user-dropdown">
+
+	<div class="header-limiter">
+		<h1><a href="#">Library <span>Management</span></a></h1>
+
+		<nav>
+			<a routerLink="/searchbook">Search Book</a>
+			<a routerLink="/adminregistration">Admin Registration</a>
+			<a routerLink="/studentregistration">Student Registration</a>
+			<a routerLink="/bookentry">Book Entry</a>
+			<a routerLink="/studentsearch">Student Search</a>
+			<!--<a routerLink="">Roles <span class="header-new-feature">new</span></a> -->
+		</nav>
+
+
+		<div class="header-user-menu" (click)="isMenuShow=!isMenuShow" (mouseover)="isMenuShow=true" (mouseleave)="isMenuShow=false" [class.show]="isMenuShow">
+			<img src="assets/2.jpg" alt="User Image"/>
+
+			<ul [style.display]="(isMenuShow)?'block':'none'"> 
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Payments</a></li>
+				<li><a routerLink="/adminlogin" class="highlight" (click)="logout()">Logout</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</header>
